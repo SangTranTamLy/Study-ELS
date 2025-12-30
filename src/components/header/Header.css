@@ -1,0 +1,68 @@
+#root {
+  min-height: 100vh;
+  padding-top: 56px;   
+  margin: 0;
+}
+
+.header-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;              
+  display: flex;
+  align-items: center;       /* căn giữa dọc */
+  padding: 0 16px;
+  background-color: whitesmoke;
+  z-index: 1000;
+}
+.header-left h3 {
+  margin: 0;
+  line-height: 1;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+.header-mid {
+  display: flex;
+  gap: 15px;
+  margin: 0 auto;
+  align-items: center;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+}
+.logo {
+  height: 32px;
+  transition: filter 300ms;
+  display: block;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #86bfffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #2d31ffaa);
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logo.react {
+  animation: logo-spin 20s linear infinite;
+}
+
+.card {
+  padding: 2em;
+}
+
+
+
