@@ -105,7 +105,7 @@ http://localhost:5173/
 CHÂU THANH SANG - (SangTranTamLy)
 
 🎓 Sinh viên – Web Developer - Editor
-- Study ELS là dự án học tập nhằm nâng cao kỹ năng React, TypeScript và xây dựng sản phẩm web thực tế.
+- Study ELS là dự án học tập nhằm nâng cao kỹ năng React, TypeScript.
 
 ---
 ## 📄 License
@@ -120,4 +120,4 @@ Có thể tự do mở rộng và phát triển thêm cho học tập & nghiên 
 
 ✨ Thank you for visiting Study ELS! ✨
 
-</div> ```
+</div>
