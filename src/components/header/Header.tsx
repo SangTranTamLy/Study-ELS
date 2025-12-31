@@ -5,7 +5,6 @@ import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
-import TabPanel from '@mui/lab/TabPanel';
 import './Header.css'
 
 function Header() {
@@ -34,6 +33,8 @@ function Header() {
                             <Tab label="Course" value="2" />
                             <Tab label="Vocabulary" value="3" />
                             <Tab label="Dictionary" value="4" />
+                            <Tab label="Translator" value="5" />
+                            <Tab label="Thesaurus" value="6" />
                         </TabList>
                     </Box>
                 </TabContext>
