@@ -1,6 +1,6 @@
 #root {
   min-height: 100vh;
-  padding-top: 56px;   
+  padding-top: 38px;
   margin: 0;
 }
 
@@ -9,60 +9,47 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 56px;              
+  height: 38px;
   display: flex;
-  align-items: center;       /* căn giữa dọc */
+  align-items: center;
   padding: 0 16px;
-  background-color: whitesmoke;
-  z-index: 100;
+  background: rgba(245, 245, 245, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
 }
+
 .header-left h3 {
   margin: 0;
-  line-height: 1;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
+  font-size: 15px;
+  padding-left: 6px;
 }
+
 .header-mid {
-  display: flex;
-  gap: 15px;
   margin: 0 auto;
-  align-items: center;
+}
+
+.header-mid .MuiTabs-flexContainer {
+  gap: 14px;
+}
+
+.header-mid .MuiTab-root {
+  min-height: auto !important;
+  padding: 16px 10px !important;
+  font-size: 13px !important;
+  text-transform: none !important;
+}
+
+.header-right .MuiButton-root {
+  min-height: 26px;
+  padding: 3px 10px;
+  font-size: 12.5px;
+  border-radius: 6px;
 }
 .header-right {
-    display: flex;
-    align-items: center;
-    margin-right: 25px;
+  margin-right: 24px; 
 }
+
 .logo {
-  height: 32px;
-  transition: filter 300ms;
+  height: 16px;
   display: block;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #86bfffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #2d31ffaa);
-}
-
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.logo.react {
-  animation: logo-spin 20s linear infinite;
-}
-
-.card {
-  padding: 2em;
-}
-
-
-
