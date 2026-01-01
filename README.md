@@ -7,6 +7,7 @@
 <img src="https://img.shields.io/badge/React-18-blue" />
 <img src="https://img.shields.io/badge/TypeScript-✔-3178c6" />
 <img src="https://img.shields.io/badge/Vite-⚡-646CFF" />
+<img src="https://img.shields.io/badge/MUI-UI-blueviolet" />
 <img src="https://img.shields.io/badge/License-Study_Project-green" />
 
 </div>
@@ -15,54 +16,96 @@
 
 ## 🚧 Trạng thái dự án
 > **Study ELS hiện đang trong quá trình xây dựng (Building).**  
-> Website và các tính năng **chưa hoàn thiện** và sẽ được **cập nhật trong thời gian tới**.
+> Website đang được phát triển từng phần, tập trung vào giao diện, nội dung và
+> định hướng các tính năng học tiếng Anh thông minh.
 
 ---
 
 ## 🌟 Giới thiệu
-**Study ELS** là một nền tảng web học tiếng Anh dành cho người mới bắt đầu, tập trung vào:
-- 📖 Đọc hiểu cơ bản  
-- 🧠 Từ vựng theo chủ đề  
-- 🎯 Định hướng học tiếng Anh hiệu quả  
+**Study ELS** là nền tảng web học tiếng Anh trực tuyến,
+tích hợp nhiều công cụ hỗ trợ học tập như:
 
-Dự án được xây dựng bằng **React + TypeScript + Vite**, hướng đến sự **đơn giản – dễ dùng – dễ mở rộng**.
+- 📘 Vocabulary  
+- 📖 Dictionary  
+- 🌐 Translator  
+- 🧠 Thesaurus  
+- 📝 Quiz  
+- 🤖 AI luyện nghe – nói (định hướng phát triển)
+
+Dự án hướng tới người học tiếng Anh tại Việt Nam,
+đặc biệt là **sinh viên, người mới bắt đầu và người tự học**.
 
 ---
 
 ## 🎯 Mục tiêu
-- Xây dựng website học tiếng Anh thân thiện cho người mới
-- Áp dụng React + TypeScript vào dự án thực tế
-- Làm nền tảng phát triển hệ thống học tiếng Anh trong tương lai
-- Phục vụ học tập, demo và nghiên cứu cá nhân
+- Xây dựng website học tiếng Anh **đơn giản – dễ dùng – dễ mở rộng**
+- Áp dụng **React + TypeScript** vào dự án thực tế
+- Tạo nền tảng phát triển các tính năng học tập nâng cao trong tương lai
+- Phục vụ học tập, demo, nghiên cứu cá nhân
 
 ---
 
 ## ✨ Tính năng
 
-### ✅ Hiện tại
-- Trang **Home giới thiệu Study ELS**
-- Giao diện cơ bản, dễ đọc
-- Nút **Login / điều hướng**
-- Cấu trúc code rõ ràng, dễ bảo trì
+### ✅ Đã hoàn thành
+- Trang **Home (Landing Page)** giới thiệu Study ELS
+- Header với **Tab Navigation**:
+  - Home
+  - Vocabulary
+  - Dictionary
+  - Translator
+  - Thesaurus
+- Nội dung Home đầy đủ:
+  - Giới thiệu
+  - Features
+  - Learning Approach
+  - Vision
+  - Call To Action
+- Cấu trúc project rõ ràng:
+  - `components/`
+  - `pages/`
+  - `assets/`
 - Sử dụng **React + TypeScript + Vite**
+- UI component từ **Material UI (MUI)**
 
-### 🔜 Sắp phát triển
-- 🔐 Login / Register hoàn chỉnh
-- 📚 Học từ vựng theo chủ đề
-- 📖 Luyện Reading (TOEIC / IELTS cơ bản)
-- 💾 Lưu tiến trình học
+---
+
+### 🔧 Đang phát triển
+- Tách từng Tab thành page riêng (Vocabulary, Dictionary, …)
+- Hoàn thiện UI/UX trang Home
+- Điều chỉnh layout Header & Button
+- Chuẩn bị setup Router cho các page
+
+---
+
+### 🔜 Kế hoạch tiếp theo
+- 📚 Trang Vocabulary (học & ôn từ vựng)
+- 📖 Trang Dictionary (Anh – Việt, Anh – Anh)
+- 🌐 Trang Translator
+- 🧠 Trang Thesaurus
+- 📝 Trang Quiz (từ vựng, ngữ pháp, nghe hiểu)
+- 🤖 AI luyện nghe & nói (mock UI + ý tưởng)
 - 📱 Responsive cho mobile
-- 🔥 Kết nối Firebase / Backend
+- 🔥 Kết nối Backend / Firebase (định hướng)
+
+---
+
+## 🧠 Phương pháp học
+- Học từng bước, không áp lực
+- Kết hợp lý thuyết & thực hành
+- Cá nhân hóa theo trình độ người học
+- Tập trung vào sử dụng tiếng Anh thực tế
 
 ---
 
 ## 🛠️ Công nghệ sử dụng
 | Công nghệ | Mô tả |
-|---------|------|
+|--------|------|
 | ⚛️ React | Xây dựng giao diện |
 | 🟦 TypeScript | An toàn kiểu dữ liệu |
 | ⚡ Vite | Build tool nhanh |
-| 🎨 CSS / Tailwind | Thiết kế giao diện |
+| 🎨 CSS | Tách riêng theo component |
+| 🧩 Material UI | UI component |
 | 📦 npm | Quản lý package |
 | 🌐 GitHub | Quản lý source code |
 
@@ -73,8 +116,8 @@ Dự án được xây dựng bằng **React + TypeScript + Vite**, hướng đ�
 Study-ELS/
 ├── public/               # tài nguyên tĩnh
 ├── src/
-│   ├── components/       # component React
-│   ├── pages/            # các trang (Home, Login, ...)
+│   ├── components/       # Header, Footer, UI components
+│   ├── pages/            # Home, Vocabulary, Dictionary...
 │   ├── assets/           # hình ảnh, icon
 │   ├── App.tsx
 │   └── main.tsx
@@ -82,6 +125,7 @@ Study-ELS/
 ├── package.json
 ├── vite.config.ts
 └── README.md
+
 ```
 ### 🚀 Cài đặt & chạy local
 1️⃣ Clone repository
