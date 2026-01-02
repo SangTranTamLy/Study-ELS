@@ -1,4 +1,3 @@
-import React from "react";
 import bgr from "../assets/bgr-study-els.png";
 import './Home.css'
 function Home() {
