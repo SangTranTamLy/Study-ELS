@@ -30,7 +30,7 @@ function Header() {
                     <Box sx={{ borderBottom: 1, borderColor: 'divider'}}>
                         <TabList onChange={handleChange} aria-label="lap API tabs example">
                             <Tab label="Home" value="1" />
-                            <Tab label="Course" value="2" />
+                            <Tab label="Quiz" value="2" />
                             <Tab label="Vocabulary" value="3" />
                             <Tab label="Dictionary" value="4" />
                             <Tab label="Translator" value="5" />
