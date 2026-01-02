@@ -34,8 +34,7 @@ function Home() {
             </p>
 
             <div className="hero-actions">
-              <button className="btn btn-primary">Login</button>
-              <button className="btn btn-outline">Sign up</button>
+              <button className="btn btn-primary">Làm Quiz</button>
             </div>
           </div>
 
@@ -47,114 +46,169 @@ function Home() {
         </div>
       </section>
 
-      {/* WHAT IS */}
-      <section className="home-section">
-        <div class="about-content">
-          <h2>What is Study ELS?</h2>
-
-          <p>Study ELS được xây dựng nhằm hỗ trợ:</p>
-
-          <ul>
-            <li>Sinh viên</li>
-            <li>Người mới bắt đầu học tiếng Anh</li>
-            <li>Người tự học</li>
-            <li>Người muốn cải thiện giao tiếp và phản xạ tiếng Anh</li>
-          </ul>
-
-          <p>
-            Nền tảng tập trung vào trải nghiệm học đơn giản, dễ tiếp cận,
-            phù hợp với người học tiếng Anh tại Việt Nam.
+      {/* About Section */}
+      <section className="about-section">
+        <div className="section-container">
+          <h2 className="section-title">Về Study ELS</h2>
+          <p className="about-text">
+            Study ELS là nền tảng học tiếng Anh thông minh được thiết kế đặc biệt cho 
+            người Việt Nam. Chúng tôi kết hợp phương pháp giảng dạy hiện đại với công nghệ 
+            AI để mang đến trải nghiệm học tập cá nhân hóa, hiệu quả và thú vị.
           </p>
-
-          {/* FEATURES */}
-          <h2>Features</h2>
-
-          <div className="feature">
-            <h3>📘 Vocabulary</h3>
-            <ul>
-              <li>Từ vựng theo chủ đề và cấp độ</li>
-              <li>Phát âm chuẩn Anh – Mỹ</li>
-              <li>Ví dụ minh họa rõ ràng</li>
-              <li>Hỗ trợ ôn tập giúp nhớ lâu</li>
-            </ul>
-          </div>
-          <div className="feature">
-            <h3>📖 Dictionary</h3>
-            <ul>
-              <li>Từ điển Anh – Việt, Anh – Anh</li>
-              <li>Giải thích dễ hiểu</li>
-              <li>Phiên âm và phát âm chuẩn</li>
-              <li>Ví dụ thực tế</li>
-            </ul>
-          </div>
-          <div className="feature">
-            <h3>🌐 Translator</h3>
-            <ul>
-              <li>Dịch từ, câu và đoạn văn</li>
-              <li>Phù hợp cho học tập và nghiên cứu</li>
-              <li>Gợi ý cách diễn đạt tự nhiên</li>
-            </ul>
-          </div>
-          <div className="feature">
-            <h3>🧠 Thesaurus</h3>
-            <ul>
-              <li>Từ đồng nghĩa và trái nghĩa</li>
-              <li>Phân biệt sắc thái nghĩa</li>
-              <li>Tránh lặp từ khi viết và nói</li>
-            </ul>
-          </div>
-          <div className="feature">
-            <h3>📝 Quiz</h3>
-            <ul>
-              <li>Quiz từ vựng</li>
-              <li>Quiz ngữ pháp</li>
-              <li>Quiz nghe hiểu</li>
-              <li>Đánh giá kết quả sau mỗi bài</li>
-              <li>Gợi ý cải thiện điểm yếu</li>
-            </ul>
-          </div>
-
-          <div className="feature">
-            <h3>🤖 AI Practice</h3>
-            <ul>
-              <li>Luyện nghe theo cấp độ</li>
-              <li>Luyện nói với nhận diện giọng nói</li>
-              <li>AI phản hồi phát âm</li>
-              <li>Mô phỏng hội thoại thực tế</li>
-              <li>Cải thiện phản xạ giao tiếp</li>
-            </ul>
-          </div>
-          {/* LEARNING APPROACH */}
-          <h2>Learning Approach</h2>
-          <ul>
-            <li>Học từng bước, không áp lực</li>
-            <li>Luyện tập đi kèm thực hành</li>
-            <li>Cá nhân hóa theo trình độ người học</li>
-            <li>Tập trung vào sử dụng tiếng Anh thực tế</li>
-          </ul>
-          {/* WHY */}
-          <h2>Why Study ELS?</h2>
-          <ul>
-            <li>Giao diện đơn giản, dễ sử dụng</li>
-            <li>Nội dung học tập rõ ràng</li>
-            <li>Học mọi lúc, mọi nơi</li>
-            <li>Tích hợp công nghệ AI hiện đại</li>
-            <li>Phù hợp cho người học Việt Nam</li>
-          </ul>
-          {/* VISION */}
-          <h2>Vision</h2>
-          <p>
-            Study ELS hướng tới việc trở thành nền tảng hỗ trợ học tiếng Anh
-            đáng tin cậy, giúp người học tự tin sử dụng tiếng Anh trong học
-            tập và cuộc sống.
+          <p className="about-text">
+            Với hơn 50,000 học viên tin tưởng, Study ELS cam kết đồng hành cùng bạn trên 
+            hành trình chinh phục tiếng Anh từ cơ bản đến nâng cao.
           </p>
-          {/* CTA */}
-          <h2>Get Started</h2>
-          <p>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="features-section">
+        <div className="section-container">
+          <h2 className="section-title">Tính Năng Nổi Bật</h2>
+          <div className="features-grid">
+            {/* Feature Card 1: Vocabulary */}
+            <div className="feature-card">
+              <div className="feature-icon">📚</div>
+              <h3 className="feature-title">Vocabulary</h3>
+              <p className="feature-description">
+                Học từ vựng theo chủ đề với hệ thống flashcard thông minh, 
+                giúp ghi nhớ lâu hơn và ứng dụng hiệu quả.
+              </p>
+            </div>
+
+            {/* Feature Card 2: Dictionary */}
+            <div className="feature-card">
+              <div className="feature-icon">📖</div>
+              <h3 className="feature-title">Dictionary</h3>
+              <p className="feature-description">
+                Từ điển Anh-Việt, Việt-Anh với phát âm chuẩn, ví dụ minh họa 
+                và giải thích chi tiết dễ hiểu.
+              </p>
+            </div>
+
+            {/* Feature Card 3: Translator */}
+            <div className="feature-card">
+              <div className="feature-icon">🌐</div>
+              <h3 className="feature-title">Translator</h3>
+              <p className="feature-description">
+                Công cụ dịch thuật chính xác hỗ trợ nhiều ngôn ngữ, 
+                giúp bạn hiểu ngữ cảnh và cách sử dụng từ đúng nhất.
+              </p>
+            </div>
+
+            {/* Feature Card 4: Thesaurus */}
+            <div className="feature-card">
+              <div className="feature-icon">🔍</div>
+              <h3 className="feature-title">Thesaurus</h3>
+              <p className="feature-description">
+                Khám phá từ đồng nghĩa, trái nghĩa để làm phong phú vốn từ 
+                và nâng cao kỹ năng viết của bạn.
+              </p>
+            </div>
+
+            {/* Feature Card 5: Quiz */}
+            <div className="feature-card">
+              <div className="feature-icon">✍️</div>
+              <h3 className="feature-title">Quiz</h3>
+              <p className="feature-description">
+                Kiểm tra kiến thức với bài quiz đa dạng, 
+                theo dõi tiến độ và xác định điểm cần cải thiện.
+              </p>
+            </div>
+
+            {/* Feature Card 6: AI Practice */}
+            <div className="feature-card">
+              <div className="feature-icon">🤖</div>
+              <h3 className="feature-title">AI Practice</h3>
+              <p className="feature-description">
+                Luyện tập giao tiếp với trợ lý AI thông minh, 
+                nhận phản hồi tức thì và cải thiện kỹ năng hội thoại.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Learning Approach Section */}
+      <section className="approach-section">
+        <div className="section-container">
+          <h2 className="section-title">Phương Pháp Học Tập</h2>
+          <div className="approach-content">
+            <div className="approach-item">
+              <div className="approach-number">01</div>
+              <h3 className="approach-item-title">Học Theo Lộ Trình</h3>
+              <p className="approach-item-text">
+                Chương trình học được thiết kế khoa học, từ cơ bản đến nâng cao, 
+                phù hợp với mọi trình độ.
+              </p>
+            </div>
+            <div className="approach-item">
+              <div className="approach-number">02</div>
+              <h3 className="approach-item-title">Thực Hành Đều Đặn</h3>
+              <p className="approach-item-text">
+                Luyện tập mỗi ngày với bài tập đa dạng, 
+                củng cố kiến thức và phát triển kỹ năng toàn diện.
+              </p>
+            </div>
+            <div className="approach-item">
+              <div className="approach-number">03</div>
+              <h3 className="approach-item-title">Đánh Giá & Phản Hồi</h3>
+              <p className="approach-item-text">
+                Hệ thống AI phân tích tiến độ, đưa ra đánh giá chi tiết 
+                và gợi ý học tập cá nhân hóa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Study ELS Section */}
+      <section className="why-section">
+        <div className="section-container">
+          <h2 className="section-title">Tại Sao Chọn Study ELS?</h2>
+          <div className="why-grid">
+            <div className="why-item">
+              <h3 className="why-item-title">💡 Công Nghệ AI Tiên Tiến</h3>
+              <p className="why-item-text">
+                Ứng dụng trí tuệ nhân tạo để cá nhân hóa trải nghiệm học tập, 
+                tối ưu hóa hiệu quả và tiết kiệm thời gian.
+              </p>
+            </div>
+            <div className="why-item">
+              <h3 className="why-item-title">🎯 Nội Dung Chất Lượng</h3>
+              <p className="why-item-text">
+                Tài liệu học được biên soạn bởi đội ngũ giáo viên có kinh nghiệm, 
+                cập nhật liên tục theo xu hướng mới.
+              </p>
+            </div>
+            <div className="why-item">
+              <h3 className="why-item-title">📱 Học Mọi Lúc, Mọi Nơi</h3>
+              <p className="why-item-text">
+                Truy cập trên mọi thiết bị, học tập linh hoạt theo lịch trình 
+                riêng của bạn, không bị giới hạn thời gian.
+              </p>
+            </div>
+            <div className="why-item">
+              <h3 className="why-item-title">🏆 Cộng Đồng Năng Động</h3>
+              <p className="why-item-text">
+                Tham gia cộng đồng học viên sôi động, trao đổi kinh nghiệm 
+                và cùng nhau tiến bộ mỗi ngày.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="cta-section">
+        <div className="cta-content">
+        <h2 className="cta-title">Get Started</h2>
+          <p className="cta-description">
             Bắt đầu hành trình học tiếng Anh của bạn ngay hôm nay với
             Study ELS – Learn smarter, not harder.
           </p>
-          <button>Bắt đầu học</button>
+          <button className="btn btn-cta">Bắt đầu học</button>
         </div>
       </section>
     </main>
