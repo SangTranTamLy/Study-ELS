@@ -1,6 +1,9 @@
 import bgr from "../assets/bgr-study-els.png";
 import './Home.css'
-function Home() {
+interface HomeProps {
+  setTab: React.Dispatch<React.SetStateAction<string>>;
+}
+function Home({ setTab }: HomeProps) {
   return (
     <main className="home">
 
@@ -33,7 +36,7 @@ function Home() {
             </p>
 
             <div className="hero-actions">
-              <button className="btn btn-primary">Làm Quiz</button>
+              <button className="btn btn-primary" onClick={() => setTab("2")}>Làm Quiz</button>
             </div>
           </div>
 
