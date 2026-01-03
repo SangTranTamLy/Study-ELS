@@ -22,15 +22,18 @@
 ---
 
 ## 🌟 Giới thiệu
-**Study ELS** là nền tảng web học tiếng Anh trực tuyến,
-tích hợp nhiều công cụ hỗ trợ học tập như:
-
-- 📘 Vocabulary  
-- 📖 Dictionary  
-- 🌐 Translator  
-- 🧠 Thesaurus  
-- 📝 Quiz  
-- 🤖 AI luyện nghe – nói (định hướng phát triển)
+**Study ELS** là nền tảng web học tiếng Anh trực tuyến, hỗ trợ 4 kỹ năng chính:
+- Nghe (Listening)
+- Nói (Speaking)
+- Đọc (Reading)
+- Viết (Writing)
+---
+Website tích hợp các công cụ học tập thông minh:
+- 📘 Vocabulary – học từ vựng theo flashcard + quiz, có thể tạo flashcard riêng.  
+- 📖 Dictionary – tra cứu từ điển chuẩn xác (cần tích hợp API/JSON chuẩn).
+- 🌐 Translator – dịch thuật đa ngôn ngữ, có thể tích hợp AI để dịch chính xác.
+- 📝 Quiz – kiểm tra từ vựng, ngữ pháp, nghe, đọc, phù hợp từng level. 
+- 🤖 AI Practice – luyện nói + viết, phân tích kỹ năng người học, gợi ý level và lộ trình học.
 
 Dự án hướng tới người học tiếng Anh tại Việt Nam,
 đặc biệt là **sinh viên, người mới bắt đầu và người tự học**.
@@ -39,58 +42,32 @@ Dự án hướng tới người học tiếng Anh tại Việt Nam,
 
 ## 🎯 Mục tiêu
 - Xây dựng website học tiếng Anh **đơn giản – dễ dùng – dễ mở rộng**
-- Áp dụng **React + TypeScript** vào dự án thực tế
-- Tạo nền tảng phát triển các tính năng học tập nâng cao trong tương lai
+- Hỗ trợ 4 kỹ năng tiếng Anh từ cơ bản đến nâng cao
+- Quiz và flashcard cá nhân hóa, lưu dữ liệu người dùng
+- Tích hợp AI phân tích trình độ để gợi ý bài học
 - Phục vụ học tập, demo, nghiên cứu cá nhân
 
 ---
 
 ## ✨ Tính năng
 
-### ✅ Đã hoàn thành
-- Trang **Home (Landing Page)** giới thiệu Study ELS
-- Header với **Tab Navigation**:
-  - Home
-  - Vocabulary
-  - Dictionary
-  - Translator
-  - Thesaurus
-- Nội dung Home đầy đủ:
-  - Giới thiệu
-  - Features
-  - Learning Approach
-  - Vision
-  - Call To Action
-- Cấu trúc project rõ ràng:
-  - `components/`
-  - `pages/`
-  - `assets/`
-- Sử dụng **React + TypeScript + Vite**
-- UI component từ **Material UI (MUI)**
+### ⚠ Cần bổ sung
+- Hỗ trợ học 4 kỹ năng (Nghe, Nói, Đọc, Viết)
+- Quiz & Flashcard từ vựng (mock UI)
+- Dictionary (UI cơ bản)
+- Translator (UI cơ bản)
+- AI Practice (mock UI luyện nói + viết)
+- Lộ trình học cá nhân hóa: theo kỹ năng + level
+- Flashcard tự tạo: lưu dữ liệu riêng của người dùng (localStorage / backend)
+- Dictionary chuẩn xác: tích hợp API hoặc dataset từ điển
+- AI phân tích trình độ: chia level, gợi ý bài học phù hợp
+- Responsive / Mobile UX: đảm bảo hiển thị tốt trên mọi thiết bị
+- Quiz đa dạng: từ vựng, ngữ pháp, nghe, đọc
+- Backend / Database: lưu tiến độ học, flashcard, kết quả quiz
 
 ---
 
-### 🔧 Đang phát triển
-- Tách từng Tab thành page riêng (Vocabulary, Dictionary, …)
-- Hoàn thiện UI/UX trang Home
-- Điều chỉnh layout Header & Button
-- Chuẩn bị setup Router cho các page
-
----
-
-### 🔜 Kế hoạch tiếp theo
-- 📚 Trang Vocabulary (học & ôn từ vựng)
-- 📖 Trang Dictionary (Anh – Việt, Anh – Anh)
-- 🌐 Trang Translator
-- 🧠 Trang Thesaurus
-- 📝 Trang Quiz (từ vựng, ngữ pháp, nghe hiểu)
-- 🤖 AI luyện nghe & nói (mock UI + ý tưởng)
-- 📱 Responsive cho mobile
-- 🔥 Kết nối Backend / Firebase (định hướng)
-
----
-
-## 🧠 Phương pháp học
+### 🧠 Phương pháp học
 - Học từng bước, không áp lực
 - Kết hợp lý thuyết & thực hành
 - Cá nhân hóa theo trình độ người học
