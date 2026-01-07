@@ -1,24 +1,17 @@
-// src/pages/Vocabulary.tsx
+import React from "react";
 
-function Vocabulary() {
-  return (
-    <main className="page vocabulary-page">
-        <section className="hero">
-            <div className="hero-content">
-                <h2>Vocabulary</h2>
-                <p>Học từ vựng theo chủ đề với hệ thống flashcard thông minh, giúp ghi nhớ lâu và ứng dụng hiệu quả.</p>
-
-                {/* Ví dụ danh sách từ vựng */}
-                <ul>
-                <li>Apple 🍎 – Quả táo</li>
-                <li>Book 📖 – Sách</li>
-                <li>Computer 💻 – Máy tính</li>
-                <li>School 🏫 – Trường học</li>
-                </ul>
-            </div>
-        </section>
-    </main>
-  );
+interface VocabularyProps {
+  setTab: React.Dispatch<React.SetStateAction<string>>;
 }
+
+const Vocabulary: React.FC<VocabularyProps> = ({ setTab }) => {
+  return (
+    <div style={{ padding: "50px", textAlign: "center" }}>
+      <h1>Vocabulary</h1>
+      <p>Học từ vựng theo chủ đề với flashcard và quiz</p>
+      <button style={{ marginTop: "20px" }} onClick={() => setTab("Home")}>Quay về Home</button>
+    </div>
+  );
+};
 
 export default Vocabulary;
