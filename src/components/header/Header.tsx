@@ -89,7 +89,8 @@ const Header: React.FC<HeaderProps> = ({ value, setValue, openLogin }) => {
               anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
               transformOrigin={{ vertical: "top", horizontal: "right" }}
             >
-              <MenuItem onClick={handleClose}>Profile</MenuItem>
+              <MenuItem onClick={() => { setValue("7"); handleClose(); }}>Dashboard</MenuItem>
+              <MenuItem onClick={() => { setValue("8"); handleClose(); }}>Profile</MenuItem>
               <MenuItem onClick={handleLogout}>Logout</MenuItem>
             </Menu>
           </>

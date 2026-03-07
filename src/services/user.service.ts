@@ -1,6 +1,7 @@
 import { doc, getDoc, setDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "./firebase";
 import type { User } from "firebase/auth";
+import { initUserStats } from "./stats.service";
 
 export const saveUserToFirestore = async (user: User) => {
   const ref = doc(db, "users", user.uid);
@@ -16,4 +17,7 @@ export const saveUserToFirestore = async (user: User) => {
       createdAt: serverTimestamp()
     });
   }
+
+  // Ensure stats doc exists
+  await initUserStats(user.uid);
 };

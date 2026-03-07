@@ -8,6 +8,8 @@ import Vocabulary from "./pages/Vocabulary";
 import Dictionary from "./pages/Dictionary";
 import Translator from "./pages/Translator";
 import Thesaurus from "./pages/Thesaurus";
+import Dashboard from "./pages/Dashboard";
+import Profile from "./pages/Profile";
 import { useAuth } from "@/context/AuthContext";
 
 function App() {
@@ -19,7 +21,7 @@ function App() {
 
   // 🔒 Chặn tab cần login
   React.useEffect(() => {
-    if (!user && ["2", "3"].includes(tab)) {
+    if (!user && ["2", "3", "7", "8"].includes(tab)) {
       setPendingTab(tab);
       setTab("1");
       setAuth("login");
@@ -49,6 +51,10 @@ function App() {
         return <Translator />;
       case "6":
         return <Thesaurus />;
+      case "7":
+        return <Dashboard setTab={setTab} />;
+      case "8":
+        return <Profile />;
       default:
         return <Home setTab={setTab} />;
     }

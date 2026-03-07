@@ -1,0 +1,396 @@
+/* ============================================================
+   Translator — Premium Dark Design
+   ============================================================ */
+
+.translator-page {
+  --indigo: #6366f1;
+  --violet: #8b5cf6;
+  --pink:   #ec4899;
+  --cyan:   #0ea5e9;
+  --green:  #10b981;
+  --bg:     #080d1a;
+  --bg2:    #0d1424;
+  --bg3:    #111827;
+  --border: rgba(255,255,255,0.07);
+  --text:   #f1f5f9;
+  --muted:  #94a3b8;
+  --card:   rgba(255,255,255,0.04);
+
+  min-height: calc(100vh - 60px);
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  padding: 48px 0 80px;
+  overflow-x: hidden;
+}
+
+@keyframes transFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes transScaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.trans-container {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.trans-header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: transFadeUp 0.5s ease both;
+}
+
+.trans-header .eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin-bottom: 12px;
+}
+
+.trans-header h1 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+  letter-spacing: -0.5px;
+}
+
+.trans-header h1 span {
+  background: linear-gradient(135deg, var(--indigo), var(--violet), var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.trans-header p {
+  color: var(--muted);
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ── Language Bar ─────────────────────────────────────────── */
+.trans-lang-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  animation: transFadeUp 0.5s ease 0.1s both;
+}
+
+.lang-select {
+  position: relative;
+}
+
+.lang-select select {
+  appearance: none;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 40px 12px 16px;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  min-width: 180px;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.lang-select select:hover {
+  border-color: rgba(99,102,241,0.3);
+}
+
+.lang-select select:focus {
+  outline: none;
+  border-color: var(--indigo);
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+}
+
+.lang-select select option {
+  background: #1e293b;
+  color: var(--text);
+}
+
+.lang-select::after {
+  content: '▾';
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  pointer-events: none;
+  font-size: 0.8rem;
+}
+
+.swap-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--indigo);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.swap-btn:hover {
+  background: linear-gradient(135deg, var(--indigo), var(--violet));
+  color: #fff;
+  border-color: transparent;
+  transform: rotate(180deg);
+  box-shadow: 0 4px 16px rgba(99,102,241,0.4);
+}
+
+/* ── Main Editor ──────────────────────────────────────────── */
+.trans-editor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  min-height: 320px;
+  animation: transScaleIn 0.5s ease 0.2s both;
+}
+
+.trans-panel {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.trans-panel + .trans-panel {
+  border-left: 1px solid var(--border);
+}
+
+.trans-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+}
+
+.trans-panel__header .lang-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--indigo);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.trans-panel__header .char-count {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.trans-panel textarea {
+  flex: 1;
+  width: 100%;
+  min-height: 240px;
+  padding: 20px;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  resize: none;
+  outline: none;
+}
+
+.trans-panel textarea::placeholder {
+  color: rgba(148,163,184,0.5);
+}
+
+.trans-panel .result-text {
+  flex: 1;
+  padding: 20px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+  min-height: 240px;
+  word-break: break-word;
+}
+
+.trans-panel .result-text.placeholder {
+  color: rgba(148,163,184,0.4);
+  font-style: italic;
+}
+
+.trans-panel__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 10px 16px;
+  border-top: 1px solid var(--border);
+}
+
+.icon-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.05);
+  color: var(--muted);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s;
+}
+
+.icon-btn:hover {
+  background: rgba(99,102,241,0.15);
+  color: var(--indigo);
+}
+
+/* ── Action Bar ───────────────────────────────────────────── */
+.trans-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 48px;
+  animation: transFadeUp 0.5s ease 0.3s both;
+}
+
+.trans-btn {
+  padding: 13px 32px;
+  border-radius: 12px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.trans-btn.primary {
+  background: linear-gradient(135deg, var(--indigo), var(--violet));
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(99,102,241,0.45);
+}
+
+.trans-btn.primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(99,102,241,0.6);
+}
+
+.trans-btn.primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.trans-btn.ghost {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.trans-btn.ghost:hover {
+  border-color: rgba(99,102,241,0.3);
+  background: rgba(255,255,255,0.06);
+}
+
+/* ── Loader ───────────────────────────────────────────────── */
+.trans-loader {
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: transSpin 0.7s linear infinite;
+}
+
+@keyframes transSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Features grid ────────────────────────────────────────── */
+.trans-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  animation: transFadeUp 0.5s ease 0.4s both;
+}
+
+.trans-feat {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.trans-feat:hover {
+  transform: translateY(-4px);
+  border-color: rgba(99,102,241,0.2);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+.trans-feat .feat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 14px;
+  font-size: 24px;
+}
+
+.trans-feat h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 6px;
+}
+
+.trans-feat p {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .trans-editor {
+    grid-template-columns: 1fr;
+  }
+  .trans-panel + .trans-panel {
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+  .trans-features {
+    grid-template-columns: 1fr;
+  }
+  .trans-lang-bar {
+    flex-wrap: wrap;
+  }
+  .lang-select select {
+    min-width: 140px;
+  }
+  .trans-header h1 {
+    font-size: 1.6rem;
+  }
+}
