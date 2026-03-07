@@ -5,7 +5,6 @@ import MenuBookIcon from "@mui/icons-material/MenuBook";
 import QuizIcon from "@mui/icons-material/Quiz";
 import WhatshotIcon from "@mui/icons-material/Whatshot";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
-import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import "./Dashboard.css";
 
 interface DashboardProps {
