@@ -86,9 +86,9 @@ const Login: React.FC<LoginProps> = ({ setTab }) => {
         />
       </div>
 
-      <p className="switch" onClick={handleResetPassword}>
+      <span className="forgot" onClick={handleResetPassword}>
         Quên mật khẩu?
-      </p>
+      </span>
 
       <button className="submit-btn" onClick={handleLogin} disabled={loading}>
         {loading ? <span className="loader" /> : "Đăng nhập"}
