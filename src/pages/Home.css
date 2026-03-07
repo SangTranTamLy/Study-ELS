@@ -19,7 +19,7 @@
   background: var(--bg);
   color: var(--text);
   overflow-x: hidden;
-  font-family: 'Inter','Roboto',system-ui,sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
 }
 
 /* ── Utility ───────────────────────────────────────────────── */
@@ -47,6 +47,7 @@
 }
 
 .section__title {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   text-align: center;
   font-size: clamp(2rem, 4.5vw, 2.8rem);
   font-weight: 800;
@@ -167,10 +168,11 @@
 }
 
 .hero__heading {
-  font-size: clamp(2.6rem, 5.5vw, 4rem);
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -1.5px;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: clamp(2.4rem, 4.2vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1px;
   color: var(--text);
   margin: 0 0 24px;
 }
@@ -480,8 +482,9 @@
 }
 
 .cta__title {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: -1px;
   line-height: 1.15;
   margin-bottom: 20px;
@@ -1117,8 +1120,7 @@ body h1{
     min-height: 10vh;
     display: grid;
     color: #fff;
-    font-family: "Inter", "DM Sans",
-    Arial, sans-serif;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
 }
 
 .title {
