@@ -44,8 +44,10 @@ const Header: React.FC<HeaderProps> = ({ value, setValue, openLogin }) => {
 
   return (
     <div className="header-left">
-      <img src={reactLogo} className="logo react" alt="React logo" />
-      <h3>Study ELS</h3>
+      <div className="header-brand">
+        <img src={reactLogo} className="logo react" alt="React logo" />
+        <h3>Study ELS</h3>
+      </div>
 
       {/* ===== MENU ===== */}
       <nav className="header-mid">
