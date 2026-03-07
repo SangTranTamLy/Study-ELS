@@ -71,32 +71,16 @@ const Header: React.FC<HeaderProps> = ({ value, setValue, openLogin }) => {
           </Button>
         ) : (
           <>
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                gap: 1,
-                cursor: "pointer",
-              }}
-              onClick={handleAvatarClick}
-            >
+            <div className="user-chip" onClick={handleAvatarClick}>
               <Avatar
                 src={profile?.avatar || undefined}
                 alt={profile?.name}
-                sx={{ width: 28, height: 28 }}
+                sx={{ width: 28, height: 28, bgcolor: "#6366f1", fontSize: "13px" }}
               >
                 {!profile?.avatar && profile?.name?.charAt(0).toUpperCase()}
               </Avatar>
-              <span
-                style={{
-                  fontWeight: 500,
-                  fontSize: "14px",
-                  color: "#222",
-                }}
-              >
-                {profile?.name || "User"}
-              </span>
-            </Box>
+              <span>{profile?.name || "User"}</span>
+            </div>
             <Menu anchorEl={anchorEl}
               open={open}
               onClose={handleClose}

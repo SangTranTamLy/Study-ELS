@@ -33,7 +33,7 @@ function Home({ setTab }: HomeProps) {
 
             <div className="hero-actions">
               <button className="btn btn-primary" onClick={() => setTab("2")}>Làm Quiz</button>
-              <button className="btn btn-primary" onClick={() => setTab("3")}>Bắt đầu học</button>
+              <button className="btn btn-outline" onClick={() => setTab("3")}>Bắt đầu học</button>
             </div>
           </div>
 

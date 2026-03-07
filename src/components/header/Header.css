@@ -1,55 +1,141 @@
+/* ─── Root offset ────────────────────────────────────────────── */
 #root {
   min-height: 100vh;
-  padding-top: 38px;
+  padding-top: 60px;
   margin: 0;
 }
 
+/* ─── Header bar ─────────────────────────────────────────────── */
 .header-left {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 38px;
+  height: 60px;
   display: flex;
   align-items: center;
-  padding: 0 16px;
-  background: rgba(245, 245, 245, 0.85);
-  backdrop-filter: blur(8px);
+  padding: 0 24px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
   z-index: 1000;
+  gap: 12px;
+}
+
+/* Brand */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
 .header-left h3 {
   margin: 0;
-  font-size: 15px;
-  padding-left: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #f1f5f9;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
 }
 
+/* Nav tabs */
 .header-mid {
-  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.header-mid .MuiTabs-root {
+  min-height: unset !important;
 }
 
 .header-mid .MuiTabs-flexContainer {
-  gap: 14px;
+  gap: 2px;
 }
 
 .header-mid .MuiTab-root {
-  min-height: auto !important;
-  padding: 16px 10px !important;
-  font-size: 13px !important;
+  min-height: 36px !important;
+  padding: 6px 14px !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
   text-transform: none !important;
+  color: #94a3b8 !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.header-mid .MuiTab-root:hover {
+  color: #f1f5f9 !important;
+  background: rgba(99,102,241,0.1) !important;
+}
+
+.header-mid .MuiTab-root.Mui-selected {
+  color: #a5b4fc !important;
+  background: rgba(99,102,241,0.15) !important;
+}
+
+.header-mid .MuiTabs-indicator {
+  background: linear-gradient(90deg, #6366f1, #8b5cf6) !important;
+  height: 2px !important;
+  border-radius: 2px !important;
+}
+
+/* Right section */
+.header-right {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .header-right .MuiButton-root {
-  min-height: 26px;
-  padding: 3px 10px;
-  font-size: 12.5px;
-  border-radius: 6px;
-}
-.header-right {
-  margin-right: 24px; 
+  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+  color: #fff !important;
+  border-radius: 10px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  padding: 6px 18px !important;
+  text-transform: none !important;
+  box-shadow: 0 2px 12px rgba(99,102,241,0.4) !important;
+  transition: all 0.2s ease !important;
 }
 
+.header-right .MuiButton-root:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 16px rgba(99,102,241,0.55) !important;
+}
+
+/* Logo */
 .logo {
-  height: 16px;
+  height: 22px;
+  width: 22px;
   display: block;
+  filter: drop-shadow(0 0 6px rgba(99,102,241,0.6));
+}
+
+/* User chip */
+.user-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px 4px 4px;
+  border-radius: 999px;
+  background: rgba(99,102,241,0.12);
+  border: 1px solid rgba(99,102,241,0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.user-chip:hover {
+  background: rgba(99,102,241,0.2);
+  border-color: rgba(99,102,241,0.4);
+}
+
+.user-chip span {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #c7d2fe;
 }
