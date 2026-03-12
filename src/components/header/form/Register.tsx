@@ -22,7 +22,7 @@ const Register: React.FC<RegisterProps> = ({ setTab }) => {
       alert("Đăng ký thành công! Vui lòng đăng nhập.");
       setTab("login");
     } catch (err: any) {
-      if (err.code === "auth/email-already-in-use") {
+      if (err.code === "Chưa nhập tài khoản") {
         alert("Email đã tồn tại. Vui lòng đăng nhập.");
         setTab("login");
       } else {

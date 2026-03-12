@@ -11,15 +11,17 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  height: 70px;
+  display: flex;
+
+  justify-content: space-between;
+
   align-items: center;
-  padding: 0 24px;
+  padding:0 260px;
   background: rgba(15, 23, 42, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 1000;
 }
 
@@ -35,24 +37,20 @@
 
 .header-left h3 {
   margin: 0;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   color: #f1f5f9;
   letter-spacing: -0.3px;
   white-space: nowrap;
 }
-
-/* Nav tabs — perfectly centered column */
 .header-mid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  
 }
-
 /* Right section */
 .header-right {
   display: flex;
-  align-items: center;
+  margin-top: 1px;
   justify-content: flex-end;
   gap: 12px;
 }
@@ -92,14 +90,6 @@
   border-radius: 2px !important;
 }
 
-/* Right section */
-.header-right {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
 .header-right .MuiButton-root {
   background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
   color: #fff !important;
@@ -117,12 +107,21 @@
   box-shadow: 0 4px 16px rgba(99,102,241,0.55) !important;
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* Logo */
 .logo {
-  height: 22px;
-  width: 22px;
-  display: block;
   filter: drop-shadow(0 0 6px rgba(99,102,241,0.6));
+  animation: spin 20s linear infinite;
+}
+.header-brand:hover .logo {
+  animation-duration: 3s; /* Chỉ mất 3 giây để xoay xong 1 vòng */
 }
 
 /* User chip */
@@ -137,6 +136,17 @@
   cursor: pointer;
   transition: all 0.2s ease;
 }
+/* Mặc định mũi tên chỉ xuống */
+.arrow-icon {
+  transition: transform 0.3s ease !important;
+  color: #c7d2fe;
+  font-size: 20px !important;
+}
+
+/* Khi menu mở (class rotate được thêm vào) */
+.arrow-icon.rotate {
+  transform: rotate(180deg); /* Quay ngược lên trên */
+}
 
 .user-chip:hover {
   background: rgba(99,102,241,0.2);
@@ -144,7 +154,59 @@
 }
 
 .user-chip span {
-  font-size: 13.5px;
+  font-size: 15.5px;
   font-weight: 500;
   color: #c7d2fe;
+}
+.header-left .menu-btn {
+  display: none;
+}
+/* mobile */
+@media (max-width: 850px) {
+  /* 1. Hiển thị nút Hamburger menu (nếu bạn có nút này trong HTML) */
+  .header-left .menu-btn {
+    display: block;
+    color: #f1f5f9;
+    cursor: pointer;
+    
+  }
+  .header-left {
+    padding: 0 20px; /* Giảm padding để có không gian cho nút menu */
+  }
+
+  /* 2. Sửa lại menu trượt (Slide-in Menu) */
+  .header-mid {
+    position: absolute;
+    top: 60px;
+    left: 100%; /* Trượt từ sát mép phải */
+    width: 100%;
+    height: calc(100vh - 60px); /* Cho menu chiếm hết chiều cao còn lại */
+    padding: 24px 20px; /* Chỉnh lại padding cho hợp lý trên mobile */
+    background: rgba(15, 23, 42, 0.98);
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa các mục */
+  }
+
+  /* Khi được thêm class 'active' (bằng Javascript) thì menu sẽ trượt vào */
+  .header-mid.active {
+    left: 0;
+  }
+
+  /* 3. Chuyển Tabs thành hàng dọc */
+  .MuiTabs-flexContainer {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+  }
+
+  /* 4. Sửa lại nút Button ở bên phải, loại bỏ padding khổng lồ */
+  .header-right {
+    margin-top: 0;
+    display: flex;
+    
+  }
+  
 }

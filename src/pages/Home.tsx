@@ -78,7 +78,9 @@ function Home({ setTab }: HomeProps) {
             <span className="hero__badge">✦ Nền tảng học tiếng Anh #1</span>
 
             <h1 className="hero__heading">
-              Học tiếng Anh <span className="hero__heading-gradient">thông minh hơn</span> mỗi ngày
+             <span className="hero__heading-gradient">Học tiếng Anh</span>  
+             <span className="hero__heading-gradient">thông minh hơn</span> 
+             <span className="hero__heading-gradient">mỗi ngày</span> 
             </h1>
 
             <p className="hero__desc">
