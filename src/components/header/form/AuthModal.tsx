@@ -57,14 +57,14 @@ const AuthModal: React.FC<AuthModalProps> = ({ tab, setTab }) => {
 
   return (
     <div
-      className={`auth-overlay ${visible ? "show" : ""}`}
+      className={`auth-overlay ${visible ? "show" : ""} ${visible ? "animate-fadeIn" : ""}`}
       onClick={closeModal}
     >
-      <div className="auth-modal" onClick={(e) => e.stopPropagation()}>
+      <div className={`auth-modal ${visible ? "animate-scaleIn" : ""}`} onClick={(e) => e.stopPropagation()}>
         <div
           className={`form-box login ${
             activeTab === "login" ? "active" : ""
-          }`}
+          } ${activeTab === "login" ? "animate-slideInLeft" : ""}`}
         >
           <Login setTab={switchTab} />
         </div>
@@ -72,7 +72,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ tab, setTab }) => {
         <div
           className={`form-box register ${
             activeTab === "register" ? "active" : ""
-          }`}
+          } ${activeTab === "register" ? "animate-slideInRight" : ""}`}
         >
           <Register setTab={switchTab} />
         </div>

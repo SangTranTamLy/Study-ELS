@@ -1,0 +1,483 @@
+:root {
+  --indigo: #6366f1;
+  --violet: #8b5cf6;
+  --pink:   #ec4899;
+  
+}
+.practice-page {
+  padding: 40px 20px;
+  color: white;
+  background: #0f172a;
+  min-height: 100vh;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.practice-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== HEADER ===== */
+
+.practice-header {
+  margin-bottom: 40px;
+  animation: slideInUp 0.6s ease-out 0.1s both;
+}
+
+.practice-title {
+  background: linear-gradient(135deg, var(--indigo), var(--violet), var(--pink));
+  background-size: 200% 200%;
+  animation: gradientMove 6s ease infinite;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.practice-desc {
+  font-size: 16px;
+  color: #9ca3af;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* ===== CHALLENGE CARD ===== */
+
+.practice-challenge-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  border: 1px solid rgba(96, 165, 250, 0.1);
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 60px;
+  animation: slideInUp 0.6s ease-out 0.2s both;
+  transition: all 0.3s ease;
+}
+
+.practice-challenge-card:hover {
+  border-color: rgba(96, 165, 250, 0.3);
+  box-shadow: 0 20px 50px rgba(96, 165, 250, 0.1);
+}
+
+.challenge-image {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  min-height: 400px;
+}
+
+.challenge-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, rgba(167, 139, 250, 0.1) 100%);
+  animation: float 6s ease-in-out infinite;
+}
+
+.challenge-content {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.challenge-badge {
+  display: inline-block;
+  background: rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(96, 165, 250, 0.5);
+  color: #60a5fa;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: fit-content;
+  animation: slideInUp 0.6s ease-out 0.3s both;
+}
+
+.challenge-time {
+  color: #9ca3af;
+  font-size: 14px;
+  margin-top: 8px;
+  display: block;
+  animation: slideInUp 0.6s ease-out 0.4s both;
+}
+
+.challenge-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 16px 0;
+  animation: slideInUp 0.6s ease-out 0.5s both;
+}
+
+.challenge-desc {
+  color: #d1d5db;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  animation: slideInUp 0.6s ease-out 0.6s both;
+}
+
+.challenge-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  animation: slideInUp 0.6s ease-out 0.7s both;
+}
+
+.challenge-btn {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.challenge-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(37, 99, 235, 0.5);
+}
+
+.challenge-progress {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* ===== AI PRACTICE SECTION ===== */
+
+.practice-ai-section {
+  margin-bottom: 60px;
+  animation: slideInUp 0.6s ease-out 0.3s both;
+}
+
+.ai-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.ai-title {
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ai-icon {
+  font-size: 28px;
+}
+
+.view-library {
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.view-library:hover {
+  color: #93c5fd;
+  transform: translateX(4px);
+}
+
+/* ===== PRACTICE GRID ===== */
+
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.practice-card {
+  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  border: 1px solid rgba(96, 165, 250, 0.1);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  animation: slideInUp 0.6s ease-out both;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.practice-card:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.practice-card:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.practice-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.practice-card:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+.practice-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.practice-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(96, 165, 250, 0.3);
+  box-shadow: 0 20px 40px rgba(96, 165, 250, 0.15);
+}
+
+.card-icon {
+  font-size: 40px;
+  margin-bottom: 16px;
+  display: block;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.practice-card:hover .card-icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.practice-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.practice-card:hover h3 {
+  color: #60a5fa;
+}
+
+.practice-card p {
+  color: #9ca3af;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.practice-card:hover p {
+  color: #d1d5db;
+}
+
+.card-btn {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.card-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+}
+
+/* ===== PERFORMANCE SECTION ===== */
+
+.practice-performance {
+  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  border: 1px solid rgba(96, 165, 250, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideInUp 0.6s ease-out 0.4s both;
+  transition: all 0.3s ease;
+}
+
+.practice-performance:hover {
+  border-color: rgba(96, 165, 250, 0.3);
+  box-shadow: 0 20px 40px rgba(96, 165, 250, 0.1);
+}
+
+.performance-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.performance-icon {
+  font-size: 48px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.performance-left h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.performance-left p {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.performance-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.performance-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.performance-btn.primary {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.performance-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+}
+
+.performance-btn.secondary {
+  background: rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  color: #60a5fa;
+}
+
+.performance-btn.secondary:hover {
+  background: rgba(96, 165, 250, 0.2);
+  border-color: rgba(96, 165, 250, 0.5);
+}
+
+/* ===== KEYFRAMES ===== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+  .practice-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .practice-challenge-card {
+    grid-template-columns: 1fr;
+  }
+
+  .challenge-image {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .practice-page {
+    padding: 20px;
+  }
+
+  .practice-title {
+    font-size: 32px;
+  }
+
+  .practice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .practice-performance {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .performance-left {
+    flex-direction: column;
+  }
+
+  .performance-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .performance-btn {
+    width: 100%;
+  }
+
+  .ai-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .challenge-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -64,9 +64,10 @@ const Login: React.FC<LoginProps> = ({ setTab }) => {
 
   return (
     <>
-      <h2>Đăng nhập</h2>
+      <h2 className="animate-fadeIn">Đăng nhập</h2>
+      <p className="form-subtitle">Đăng nhập để tiếp tục</p>
 
-      <div className="input-group">
+      <div className="input-group animate-slideInUp stagger-1">
         <EmailIcon className="icon" />
         <input
           type="email"
@@ -76,7 +77,7 @@ const Login: React.FC<LoginProps> = ({ setTab }) => {
         />
       </div>
 
-      <div className="input-group">
+      <div className="input-group animate-slideInUp stagger-2">
         <LockIcon className="icon" />
         <input
           type="password"
@@ -86,17 +87,17 @@ const Login: React.FC<LoginProps> = ({ setTab }) => {
         />
       </div>
 
-      <span className="forgot" onClick={handleResetPassword}>
+      <span className="forgot animate-fadeIn stagger-3" onClick={handleResetPassword}>
         Quên mật khẩu?
       </span>
 
-      <button className="submit-btn" onClick={handleLogin} disabled={loading}>
+      <button className="submit-btn animate-slideInUp stagger-4" onClick={handleLogin} disabled={loading}>
         {loading ? <span className="loader" /> : "Đăng nhập"}
       </button>
 
-      <div className="divider">Hoặc</div>
+      <div className="divider animate-fadeIn stagger-5">Hoặc</div>
 
-      <div className="social-group">
+      <div className="social-group animate-slideInUp stagger-5">
         <button className="social google" onClick={handleGoogleLogin}>
           <GoogleIcon /> Google
         </button>
@@ -107,7 +108,7 @@ const Login: React.FC<LoginProps> = ({ setTab }) => {
 
       <p className="switch">
         Chưa có tài khoản? 
-        <span onClick={() => setTab("register")}>Đăng ký</span>
+        <span onClick={() => setTab("register")}> Đăng ký</span>
       </p>
     </>
   );

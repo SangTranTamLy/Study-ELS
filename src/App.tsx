@@ -3,9 +3,8 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import AuthModal from "./components/header/form/AuthModal";
 import Home from "./pages/Home";
-import Quiz from "./pages/Quiz";
 import Vocabulary from "./pages/Vocabulary";
-import Dictionary from "./pages/Dictionary";
+import Practice from "./pages/Practice";    
 import Translator from "./pages/Translator";
 import Thesaurus from "./pages/Thesaurus";
 import Dashboard from "./pages/Dashboard";
@@ -42,18 +41,16 @@ function App() {
       case "1":
         return <Home setTab={setTab} />;
       case "2":
-        return <Quiz setTab={setTab} />;
-      case "3":
         return <Vocabulary setTab={setTab} />;
+      case "3":
+        return <Practice setTab={setTab} />;
       case "4":
-        return <Dictionary />;
-      case "5":
         return <Translator />;
-      case "6":
+      case "5":
         return <Thesaurus />;
-      case "7":
+      case "6":
         return <Dashboard setTab={setTab} />;
-      case "8":
+      case "7":
         return <Profile />;
       default:
         return <Home setTab={setTab} />;

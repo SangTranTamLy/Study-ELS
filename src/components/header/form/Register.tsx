@@ -34,6 +34,7 @@ const Register: React.FC<RegisterProps> = ({ setTab }) => {
   return (
     <>
       <h2>Đăng ký</h2>
+      <p className="form-subtitle">Tạo tài khoản mới</p>
 
       <div className="input-group">
         <PersonIcon className="icon" />
@@ -58,7 +59,7 @@ const Register: React.FC<RegisterProps> = ({ setTab }) => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-      </div>
+      </div>  
 
       <button className="submit-btn" onClick={handleRegister}>
         Đăng ký

@@ -180,7 +180,7 @@
     top: 60px;
     left: 100%; /* Trượt từ sát mép phải */
     width: 100%;
-    height: calc(100vh - 60px); /* Cho menu chiếm hết chiều cao còn lại */
+    height: calc(30vh - 60px); /* Cho menu chiếm hết chiều cao còn lại */
     padding: 24px 20px; /* Chỉnh lại padding cho hợp lý trên mobile */
     background: rgba(15, 23, 42, 0.98);
     transition: left 0.3s ease;

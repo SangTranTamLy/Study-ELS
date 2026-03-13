@@ -69,11 +69,10 @@ const Header: React.FC<HeaderProps> = ({ value, setValue, openLogin }) => {
           <TabContext value={value}>
             <TabList onChange={handleTabChange}>
               <Tab label="Home" value="1" />
-              <Tab label="Quiz" value="2" />
-              <Tab label="Vocabulary" value="3" />
-              <Tab label="Dictionary" value="4" />
-              <Tab label="Translator" value="5" />
-              <Tab label="Thesaurus" value="6" />
+              <Tab label="Vocabulary" value="2" />
+              <Tab label="Practice" value="3" />
+              <Tab label="Translator" value="4" />
+              <Tab label="Thesaurus" value="5" />
 
             </TabList>
           </TabContext>
