@@ -3,7 +3,7 @@
   import path from "path";
 
   export default defineConfig({
-    base: "/Study-ELS/",
+    base: "/study-els/",
     plugins: [react()],
     resolve: {
       alias: {
