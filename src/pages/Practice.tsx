@@ -3,7 +3,7 @@ import "./Practice.css";
 interface PracticeProps {
   setTab: React.Dispatch<React.SetStateAction<string>>;
 }
-function Practice({ setTab }: PracticeProps) {
+function Practice( { setTab }: PracticeProps) {
   return (
     <div className="practice-page">
       <div className="practice-container">
@@ -35,7 +35,9 @@ function Practice({ setTab }: PracticeProps) {
             </p>
 
             <div className="challenge-actions">
-              <button className="challenge-btn">Start Quiz</button>
+              <button className="challenge-btn" onClick={() => setTab("quiz")}>
+                Start Quiz
+              </button>
               <span className="challenge-progress">14/20 Questions today</span>
             </div>
           </div>

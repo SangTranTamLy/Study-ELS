@@ -1,10 +1,7 @@
-import React from "react";
-import "./Vocabulary.css";
-interface VocabularyProps {
-  setTab: React.Dispatch<React.SetStateAction<string>>;
-}
 
-function Vocabulary({ setTab }: VocabularyProps) {
+import "./Vocabulary.css";
+
+function Vocabulary() {
   return (
     <div className="vocabulary-page">
       <div className="voca-container">
