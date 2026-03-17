@@ -44,7 +44,7 @@ function Quiz() {
 
             {/* Global Ranking */}
             <div className="ranking-card">
-              <div class="ranking-header">
+              <div className="ranking-header">
                 <h3>🏆 Global Ranking</h3>
               </div>
 
