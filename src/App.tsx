@@ -4,9 +4,9 @@ import Footer from "./components/footer/Footer";
 import AuthModal from "./components/header/form/AuthModal";
 import Home from "./pages/Home";
 import Vocabulary from "./pages/Vocabulary";
+import Quiz from "./pages/Quiz";
 import Practice from "./pages/Practice";    
 import Translator from "./pages/Translator";
-import Thesaurus from "./pages/Thesaurus";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import { useAuth } from "@/context/AuthContext";
@@ -20,7 +20,7 @@ function App() {
 
   // 🔒 Chặn tab cần login
   React.useEffect(() => {
-    if (!user && ["2", "3", "7", "8"].includes(tab)) {
+    if (!user && ["2", "3", "5", "8"].includes(tab)) {
       setPendingTab(tab);
       setTab("1");
       setAuth("login");
@@ -41,13 +41,13 @@ function App() {
       case "1":
         return <Home setTab={setTab} />;
       case "2":
-        return <Vocabulary setTab={setTab} />;
+        return <Vocabulary/>;
       case "3":
         return <Practice setTab={setTab} />;
       case "4":
         return <Translator />;
       case "5":
-        return <Thesaurus />;
+        return <Quiz />;
       case "6":
         return <Dashboard setTab={setTab} />;
       case "7":

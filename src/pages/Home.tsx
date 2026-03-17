@@ -92,7 +92,7 @@ function Home({ setTab }: HomeProps) {
               <button className="btn btn--primary" onClick={() => setTab("3")}>
                 Bắt đầu miễn phí →
               </button>
-              <button className="btn btn--ghost" onClick={() => setTab("3")}>
+              <button className="btn btn--ghost" onClick={() => setTab("5")}>
                 Làm thử Quiz
               </button>
             </div>

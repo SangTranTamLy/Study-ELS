@@ -72,7 +72,7 @@ const Header: React.FC<HeaderProps> = ({ value, setValue, openLogin }) => {
               <Tab label="Vocabulary" value="2" />
               <Tab label="Practice" value="3" />
               <Tab label="Translator" value="4" />
-              <Tab label="Thesaurus" value="5" />
+              <Tab label="Quiz" value="5" />
 
             </TabList>
           </TabContext>

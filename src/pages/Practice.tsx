@@ -1,4 +1,9 @@
 import bgr from "../assets/bgr-study-els.png";
+import { UilMicrophone } from '@iconscout/react-unicons'
+import { UilComments } from '@iconscout/react-unicons'
+import { UilClipboardNotes } from '@iconscout/react-unicons'
+import { UilAssistiveListeningSystems } from '@iconscout/react-unicons'
+import { UilRobot } from '@iconscout/react-unicons'
 import "./Practice.css";
 interface PracticeProps {
   setTab: React.Dispatch<React.SetStateAction<string>>;
@@ -35,7 +40,7 @@ function Practice( { setTab }: PracticeProps) {
             </p>
 
             <div className="challenge-actions">
-              <button className="challenge-btn" onClick={() => setTab("quiz")}>
+              <button className="challenge-btn" onClick={() => setTab("Quiz")}>
                 Start Quiz
               </button>
               <span className="challenge-progress">14/20 Questions today</span>
@@ -47,7 +52,9 @@ function Practice( { setTab }: PracticeProps) {
         <div className="practice-ai-section">
           <div className="ai-header">
             <h2 className="ai-title">
-              <span className="ai-icon">🤖</span>
+              <span className="ai-icon">
+                <UilRobot size="60" color="#fff" />
+              </span>
               AI Practice
             </h2>
             <a href="#" className="view-library">View Library →</a>
@@ -57,7 +64,9 @@ function Practice( { setTab }: PracticeProps) {
             
             {/* Speaking Card */}
             <div className="practice-card">
-              <div className="card-icon speaking">🎤</div>
+              <div className="card-icon speaking"> 
+                <UilMicrophone size="30" color="#fff" />
+              </div>
               <h3>Speaking</h3>
               <p>Refine your pronunciation and intonation with real-time phoneme analysis.</p>
               <button className="card-btn">Practice Now</button>
@@ -65,7 +74,9 @@ function Practice( { setTab }: PracticeProps) {
 
             {/* Conversation Card */}
             <div className="practice-card">
-              <div className="card-icon conversation">💬</div>
+              <div className="card-icon conversation">
+                <UilComments size="30" color="#fff" />
+              </div>
               <h3>Conversation</h3>
               <p>Chat with our AI tutors on situational topics ranging from travel to business.</p>
               <button className="card-btn">Start Chat</button>
@@ -73,7 +84,9 @@ function Practice( { setTab }: PracticeProps) {
 
             {/* Grammar Card */}
             <div className="practice-card">
-              <div className="card-icon grammar">📋</div>
+              <div className="card-icon grammar">
+                <UilClipboardNotes size="30" color="#fff" />
+              </div>
               <h3>Grammar</h3>
               <p>Interactive syntax exercises that adapt to your specific learning weaknesses.</p>
               <button className="card-btn">Test Skills</button>
@@ -81,7 +94,9 @@ function Practice( { setTab }: PracticeProps) {
 
             {/* Listening Card */}
             <div className="practice-card">
-              <div className="card-icon listening">🎧</div>
+              <div className="card-icon listening">
+                <UilAssistiveListeningSystems size="30" color="#fff" />
+              </div>
               <h3>Listening</h3>
               <p>Audio comprehension tasks using diverse accents and realistic background noise.</p>
               <button className="card-btn">Listen Now</button>
